@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fi.jamk.android_basicuicontrols_2.MainActivity">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:id="@+id/tableLayout">
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="100px"
+                android:layout_height="wrap_content"
+                android:text="Login:" />
+
+            <AutoCompleteTextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Password:"
+                app:layout_constraintRight_toLeftOf="@+id/PasswordText1"
+                app:layout_constraintTop_toTopOf="@+id/PasswordText1" />
+
+            <EditText
+                android:id="@+id/PasswordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintLeft_toLeftOf="@+id/loginText"
+                app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+
+
+
+        </TableRow>
+        <TableRow>
+            <Button
+                android:onClick="ButtonClicked"
+                android:id="@+id/LoginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
